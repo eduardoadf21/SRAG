@@ -112,7 +112,7 @@ data_vacinacao <- data.frame(
 )
 
 #população = 204400799
-vac = ggplot(data_vacinacao, aes(x="", y=value, fill=group ))+
+vax = ggplot(data_vacinacao, aes(x="", y=value, fill=group ))+
   geom_bar(stat="identity", width=1, color="white") +
   coord_polar("y", start=0) +
   theme_void() +
@@ -124,5 +124,5 @@ vac = ggplot(data_vacinacao, aes(x="", y=value, fill=group ))+
   labs(caption = "source: https://infoms.saude.gov.br/extensions/SEIDIGI_DEMAS_Vacina_C19/SEIDIGI_DEMAS_Vacina_C19.html") +
   theme(plot.caption = element_text(hjust = 0.4, size = 10, vjust= 2)) 
 
-grid.arrange(death,vac)
+grid.arrange(death,vax)
 
