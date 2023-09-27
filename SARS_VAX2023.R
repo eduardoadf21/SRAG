@@ -87,7 +87,7 @@ ggplot(data_obitos, aes(x="", y=value, fill=group))+
             position = position_stack(vjust=0.5))
 #15397
 data_obitos <- data.frame(
-  group = c("3+ doses: 62.82%","2 doses: 17.64% ","1 dose: 2.94%","0 doses: 16.58%"),
+  group = c("booster or more: 62.82%","2 doses: 17.64% ","1 dose: 2.94%","0 doses: 16.58%"),
   value = c(9673,2717,453,2554)
 )
 
@@ -107,8 +107,8 @@ death = ggplot(data_obitos, aes(x="", y=value, fill=group ))+
   theme(plot.caption = element_text(hjust = 0.5, size = 10)) 
 
 data_vacinacao <- data.frame(
-  group = c("3+ doses: 1.40%","2 doses: 80.49% ","1 dose: 8.44%","0 doses: 9.65%"),
-  value = c(2862860,164531388,17271748,19734803)
+  group = c("booster or more: 60.64%","2 doses: 22.29% ","1 dose: 9.43%","0 doses: 7.62%"),
+  value = c( 123968124 ,45574684,19279149,15578842)
 )
 
 #população = 204400799
@@ -121,7 +121,7 @@ vax = ggplot(data_vacinacao, aes(x="", y=value, fill=group ))+
   scale_fill_brewer() +
   labs(subtitle = "population = 203,062,512") +
   theme(plot.subtitle = element_text(hjust = 0.5, size = 10)) +
-  labs(caption = "source: https://infoms.saude.gov.br/extensions/SEIDIGI_DEMAS_Vacina_C19/SEIDIGI_DEMAS_Vacina_C19.html") +
+  labs(caption = "source: https://vacinabrasil.org/") +
   theme(plot.caption = element_text(hjust = 0.4, size = 10, vjust= 2)) 
 
 grid.arrange(death,vax)
